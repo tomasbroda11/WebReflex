@@ -3,6 +3,7 @@ from WebTomas.components.link_icon import link_icon
 from WebTomas.components.info_text import info_text
 from WebTomas.styles.colors  import Color, text_color
 from WebTomas.styles.styles import Size
+import WebTomas.styles.styles as sty
 
 
 def header() -> rx.Component:
@@ -36,12 +37,13 @@ def header() -> rx.Component:
                 rx.text("Soy un estudiante de ingenieria en sistemas de informacion de 24 años.\n"
                         "Vivo en Argentina y soy un apasionado por la tecnologia y la programacion.\n"
                         "Tambien me encanta el basquet y los videojuegos!",
-                        color= text_color.BODY.value
+                        color= text_color.BODY.value,
+                        font_size = "0.9em"
                         ),
                 rx.hstack(
-                    link_icon("https://linkedin.com/in/tomasbroda"),
-                    link_icon("https://linkedin.com/in/tomasbroda"),
-                    link_icon("https://linkedin.com/in/tomasbroda")
+                    link_icon(sty.LINKEDIN_URL),
+                    link_icon(sty.LINKEDIN_URL),
+                    link_icon(sty.LINKEDIN_URL)
                 ),
                 align_items="start",
                 spacing="4"

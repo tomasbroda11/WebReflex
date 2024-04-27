@@ -58,13 +58,15 @@ def form() -> rx.Component:
                 rx.button("Enviar", type="submit")
             ),
             width="100%",
-            on_submit=FormState.manejar_envio(),
-            reset_on_submit=True
+            on_submit=FormState.manejar_envio,
+            reset_on_submit=True,
             
         ),
         rx.divider(color_scheme="orange", decorative=True),
         title("Resultados"),
-        rx.text(FormState.form_data.to_string()),
+        rx.text(FormState.form_data.to_string(),
+                color= text_color.FOOTER.value
+                ),
         spacing= "3",
         width="100%",
         align= "center"

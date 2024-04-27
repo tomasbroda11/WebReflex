@@ -29,6 +29,14 @@ def index() -> rx.Component: #esta es la pagina ppal
         footer.footer()
     )
 
-app = rx.App(style= styles.BASE_SYTLE)
-app.add_page(index) #agrego la pagina ppal a la app 
+app = rx.App(
+        stylesheets=styles.STYLESHEETS,
+        style= styles.BASE_SYTLE
+)
+app.add_page(
+        index,
+        title="Tomas Broda | Mi web personal",
+        description= "Hola, mi nombre es Tomás Broda y soy estudiante avanzado en ingenieria en sistemas de informacion",
+        image=""             
+) #agrego la pagina ppal a la app 
 app.compile()

@@ -3,5 +3,10 @@ from enum import Enum
 
 class font(Enum):
     LOGO = "Noto Serif"
-    DEFAULT = "Poppins-Light"
-    TITLE = "Poppins-Bold"
+    DEFAULT = "Poppins"
+    TITLE = "Poppins"
+
+class FontWeight(Enum):
+    LIGHT = "300",
+    BOLD =  "700",
+    DEFAULT = "400"
